@@ -23,10 +23,18 @@ public class Oficina extends Evento {
     }
 
     public List getListaTecnologias() {
-        return listaTecnologias;
+        List<String> clone = new LinkedList<String>(this.listaTecnologias);
+        for (String tecnologia : this.listaTecnologias) {      
+            clone.add(tecnologia);   
+        }
+        return clone;
     }
 
     public void adicionarTecnologi(String tecnologia) {
         this.listaTecnologias.add(tecnologia);
+    }
+
+    public String toString() {
+        return super.toString() + "Evento Oficina:\nMentor: " + this.getNomeMentor() + "\nDescrição das atividades: " + this.getDescAtividades() + "\nTecnologias: " + this.getListaTecnologias();
     }
 }
