@@ -21,7 +21,7 @@ public class Oficina extends Evento {
     public String getDescAtividades() {
         return descAtividades;
     }
-
+    
     public List getListaTecnologias() {
         List<String> clone = new LinkedList<String>(this.listaTecnologias);
         for (String tecnologia : this.listaTecnologias) {      
